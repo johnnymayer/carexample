@@ -1,4 +1,4 @@
-# Blank Website Resource
+# Car Example
 
 ## Introduction
 
