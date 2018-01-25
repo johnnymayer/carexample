@@ -1,7 +1,8 @@
-function Car(make, model, year) {
-  this.make = make;
+function Car(model, year, miles) {
+  this.make = "Chevrolet";
   this.model = model;
   this.year = year;
+  this.miles = miles;
 };
 
 function Garage(name) {
@@ -34,6 +35,7 @@ $(document).ready(function() {
 
   $("#serviceCars").click(function() {
     console.log(serviceGarage.carChoice());
+    
   });
 
   $("#showCars").click(function() {
