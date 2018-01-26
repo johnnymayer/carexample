@@ -13,6 +13,7 @@ h1 {
 .button {
     background-color: white; /* Green */
     border-color: rgba(24,249,96,.30);
+    border-style: outset;
     color: black;
     width: 240px;
     height: 120px;
@@ -32,4 +33,6 @@ h1 {
     box-shadow: 1px 1px 140px 1px rgba(24,249,96,.5);
     -webkit-box-shadow: 1px 1px 140px 1px rgba(24,249,96,.5);
     -moz-box-shadow: 1px 1px 140px 1px rgba(24,249,96,.5);
+    border-width: 6px;
+    border-style: ridge;
 }

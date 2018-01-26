@@ -5,9 +5,18 @@ function Car(model, year, miles) {
   this.miles = miles;
 };
 
+function Motorcycle(model, year, miles, color) {
+  this.make = "Ducati";
+  this.model = model;
+  this.year = year;
+  this.miles = miles;
+  this.color = color;
+}
+
 function Garage(name) {
   this.name = name;
   this.cars = [];
+  this.motos = [];
 };
 
 Car.prototype.getYear = function() {
@@ -23,9 +32,18 @@ Garage.prototype.addCar = function(car) {
   this.cars.push(car);
 };
 
+Garage.prototype.addMoto = function(moto) {
+  this.moto.push(moto);
+}
+
 Garage.prototype.moveCar = function(newGarage) {
   var car = this.cars.pop();
   newGarage.cars.push(car);
+};
+
+Garage.prototype.moveMoto = function(newGarage) {
+  var moto = this.motos.pop();
+  newGarage.motos.push(moto);
 };
 
 $(document).ready(function() {
@@ -35,7 +53,7 @@ $(document).ready(function() {
 
   $("#serviceCars").click(function() {
     console.log(serviceGarage.carChoice());
-    
+
   });
 
   $("#showCars").click(function() {
@@ -48,8 +66,10 @@ $(document).ready(function() {
     var carModel = $("#new-model").val();
     var carYear = $("#new-year").val();
     var carData = new Car(carMake, carModel, carYear);
+    var motoData = new Motorcycle(model, year, miles, color);
     console.log(serviceGarage);
     rayLewisGarage.addCar(carData);
+    rayLewisGarage.addMoto(motoData);
 
 
   });
